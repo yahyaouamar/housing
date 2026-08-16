@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { Home } from './home/home';
-import { HousingLocation } from './housing-location/housing-location';
 
 @Component({
   selector: 'app-root',
-  imports: [Home, HousingLocation],
+  imports: [Home],
   template: `
     <main>
       <header class="brand-name">

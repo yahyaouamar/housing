@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 export interface HousingLocationInfo {
   id: number;
@@ -17,4 +17,6 @@ export interface HousingLocationInfo {
   templateUrl: './housing-location.html',
   styleUrl: './housing-location.css',
 })
-export class HousingLocation {}
+export class HousingLocation {
+  housingLocation = input.required<HousingLocationInfo>();
+}
