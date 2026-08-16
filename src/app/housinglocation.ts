@@ -1,1 +1,3 @@
-export interface Housinglocation {}
+export interface Housinglocation {
+  id: number;
+}
