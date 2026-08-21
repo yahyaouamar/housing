@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ReactiveFormsModule,FormControl,FormGroup} from '@angular/forms';
+import {ReactiveFormsModule, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-user',
@@ -20,7 +20,7 @@ export class User {
   alert(this.profileForm.value.name + ' | ' + this.profileForm.value.email);
   }
   profileForm = new FormGroup({
-  name: new FormControl(''),
-  email: new FormControl(''),
+  name: new FormControl('', Validators.required),
+  email: new FormControl('', [Validators.required, Validators.email]),
   });
 }
