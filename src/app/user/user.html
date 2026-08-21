@@ -4,13 +4,15 @@
   {{ username }}'s favorite framework: {{ favoriteFramework }}
 </p>
 
-<label for="framework">
-  Favorite Framework:
-  <input
-    id="framework"
-    type="text"
-    [(ngModel)]="favoriteFramework"
-  />
-</label>
+<div class="framework-row">
+  <label for="framework">
+    Favorite Framework:
+    <input
+      id="framework"
+      type="text"
+      [(ngModel)]="favoriteFramework"
+    />
+  </label>
 
-<p>Your favorite framework is: {{ favoriteFramework }}</p>
+  <button (click)="showFramework()">Show Framework</button>
+</div>
