@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { CarService } from './car.service';
 
 @Component({
   selector: 'app-root',
@@ -19,4 +20,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   `,
   styleUrls: ['./app.css'],
 })
-export class App {}
+export class App {
+  carService = inject(CarService);
+}
